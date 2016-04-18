@@ -9,7 +9,7 @@ import nengo
 import matplotlib.pyplot as plt
 import raphan_matrices as rmat
 
-# EYE GLOBE DYNAMICS
+# EYE GLOBE DYNAMICS (not currently working)
 # ====
 # omega is 3x1
 # phi is scalar
@@ -69,7 +69,7 @@ tau_c = rmat.tau_drift
 model = nengo.Network('Eye control', seed=5)
 
 with model:
-    stim_pitch = nengo.Node(piecewise({0:1, .5:0}))
+    stim_pitch = nengo.Node(piecewise({0:1, .05:0}))
     stim_roll = nengo.Node(piecewise({0:0, .5:0}))
     stim_yaw = nengo.Node(piecewise({0:0, .8:1, .9:0}))
 
