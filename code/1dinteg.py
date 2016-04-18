@@ -2,6 +2,7 @@ from __future__ import division
 from nengo.utils.functions import piecewise
 from nengo.utils.matplotlib import rasterplot
 from scipy.integrate import odeint
+from nengo.utils.ensemble import tuning_curves
 
 import numpy as np
 import nengo 
@@ -186,6 +187,4 @@ torque = []
 for i in range(0, len(sim.data[torque_p])):
     torque.append([sim.data[torque_p][i], sim.data[torque_r][i], sim.data[torque_y][i]])
 
-kinem = eye_globe(np.asarray(torque))
-
-#plt.show()
+plt.show()
